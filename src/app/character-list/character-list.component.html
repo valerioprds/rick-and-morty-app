@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div *ngFor="let character of characters" class="col-12 col-sm-6 col-md-4 col-lg-3">
-      <div class="card mb-4">
+      <div class="card mb-4 border-card">
         <img [src]="character.image" alt="{{ character.name }}" class="card-img-top" />
         <div class="card-body" style="height: 190px;">
           <h5 class="card-title">{{ character.name }}</h5>

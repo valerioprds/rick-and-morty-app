@@ -1,4 +1,7 @@
 .card-img-top {
   border-radius: 50%;
+}
 
+.border-card {
+  border: 2px solid #bed464;
 }
