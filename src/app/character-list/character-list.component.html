@@ -1,28 +1,36 @@
 <div class="container">
+  <div class="title-with-line">
+    <h1 class="title-text mt-5">Character List</h1>
+    <div class="line mt-5"></div>
+  </div>
   <div class="row">
-    <div
-      *ngFor="let character of characters"
-      class="col-12 col-sm-6 col-md-4 col-lg-3"
-    >
-      <div class="card mb-4 border-card">
+    <div class="container">
+      <div class="row">
         <div
-          class="d-flex justify-content-center align-items-center"
-          style="height: 150px"
+          *ngFor="let character of characters"
+          class="col-12 col-sm-6 col-md-4 col-lg-3"
         >
-          <img
-            [src]="character.image"
-            alt="{{ character.name }}"
-            class="card-img-top"
-          />
-        </div>
-        <div class="card-body mt-2" style="height: 190px">
-          <h5 class="card-title">{{ character.name }}</h5>
-          <!-- Alive or dead -->
-          <p class="card-text">Status: {{ character.status }}</p>
-          <!-- Human or not -->
-          <p class="card-text">Species: {{ character.species }}</p>
-          <!-- Location -->
-          <p class="card-text">Location: {{ character.location.name }}</p>
+          <div class="card mb-4 border-card">
+            <div
+              class="d-flex justify-content-center align-items-center"
+              style="height: 150px"
+            >
+              <img
+                [src]="character.image"
+                alt="{{ character.name }}"
+                class="card-img-top"
+              />
+            </div>
+            <div class="card-body mt-2" style="height: 190px">
+              <h5 class="card-title">{{ character.name }}</h5>
+              <!-- Alive or dead -->
+              <p class="card-text">Status: {{ character.status }}</p>
+              <!-- Human or not -->
+              <p class="card-text">Species: {{ character.species }}</p>
+              <!-- Location -->
+              <p class="card-text">Location: {{ character.location.name }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

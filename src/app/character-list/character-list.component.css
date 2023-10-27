@@ -1,4 +1,20 @@
+.title-with-line {
+  display: flex;
+  align-items: center;
+}
 
+.title-text {
+  font-size: 40px;
+  margin-right: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.line {
+  flex-grow: 1;
+  border-top: 2px solid #bed464;
+  content: "";
+}
 
 
 .card-img-top {
