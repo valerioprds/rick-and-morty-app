@@ -1,17 +1,19 @@
-<div class="character-list">
-  <div *ngFor="let character of characters" class="character-card">
-    <img
-      [src]="character.image"
-      alt="{{ character.name }}"
-      class="character-image"
-    />
-    <h2 class="character-name">{{ character.name }}</h2>
-    <!-- alive or dead -->
-    <p class="character-status">Status: {{ character.status }}</p>
-    <!-- human or not  -->
-    <p class="character-species">Species: {{ character.species }}</p>
-    <!-- location  -->
-    <p class="character-species">Location: {{ character.location.name }}</p>
-    <!-- Add more character details as needed -->
+<div class="container">
+  <div class="row">
+    <div *ngFor="let character of characters" class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card mb-4">
+        <img [src]="character.image" alt="{{ character.name }}" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ character.name }}</h5>
+          <!-- Alive or dead -->
+          <p class="card-text">Status: {{ character.status }}</p>
+          <!-- Human or not -->
+          <p class="card-text">Species: {{ character.species }}</p>
+          <!-- Location -->
+          <p class="card-text">Location: {{ character.location.name }}</p>
+          <!-- Add more character details as needed -->
+        </div>
+      </div>
+    </div>
   </div>
 </div>
