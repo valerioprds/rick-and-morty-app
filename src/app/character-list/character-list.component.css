@@ -1,6 +1,10 @@
 .card-img-top {
+
   border-radius: 50%;
+  width: 200px;
+  height: 200px
 }
+
 
 .border-card {
   border: 2px solid #bed464;
