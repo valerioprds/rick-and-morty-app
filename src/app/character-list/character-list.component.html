@@ -3,7 +3,7 @@
     <div *ngFor="let character of characters" class="col-12 col-sm-6 col-md-4 col-lg-3">
       <div class="card mb-4">
         <img [src]="character.image" alt="{{ character.name }}" class="card-img-top" />
-        <div class="card-body">
+        <div class="card-body" style="height: 190px;">
           <h5 class="card-title">{{ character.name }}</h5>
           <!-- Alive or dead -->
           <p class="card-text">Status: {{ character.status }}</p>
@@ -11,7 +11,6 @@
           <p class="card-text">Species: {{ character.species }}</p>
           <!-- Location -->
           <p class="card-text">Location: {{ character.location.name }}</p>
-          <!-- Add more character details as needed -->
         </div>
       </div>
     </div>
