@@ -3,8 +3,8 @@
 }
 
 .logo-container img {
-  width: 900px;
-  height: 450px;
+  max-width: 100%;
+  height: auto;
 }
 
 .title-with-line {
