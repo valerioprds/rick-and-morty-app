@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { CharacterService } from 'src/services/character.service';
 
@@ -10,6 +10,8 @@ import { CharacterService } from 'src/services/character.service';
 export class CharacterListComponent implements OnInit {
   characters: any[] = [];
   searchForm: FormGroup;
+  page = 1; // present page
+  loading = false;
 
   constructor(private characterService: CharacterService) {
     this.searchForm = new FormGroup({
@@ -18,12 +20,30 @@ export class CharacterListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loadCharacters();
+
+    window.addEventListener('scroll', this.onScroll, true);
+  }
+
+  ngOnDestroy() {
+    //Removes scroll watcher when component is destroyed
+    window.removeEventListener('scroll', this.onScroll, true);
+  }
+
+  loadCharacters() {
+    this.loading = true;
+
     this.characterService.getCharacters().subscribe(
       (data: any) => {
-        this.characters = data['results']; // Access the 'results' property directly
+        const newCharacters = data['results'];
+        this.characters = [...this.characters, ...newCharacters]; // adds new page of characters
+
+        this.loading = false;
+        this.page++; // Increase page for next load
       },
       (error) => {
         console.error('Error fetching data:', error);
+        this.loading = false;
       }
     );
   }
@@ -48,5 +68,16 @@ export class CharacterListComponent implements OnInit {
         console.error('Error fetching data:', error);
       }
     );
+  }
+
+  // Function to handle scroll event
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: Event) {
+    if (
+      window.innerHeight + window.scrollY >= document.body.offsetHeight - 1 &&
+      !this.loading
+    ) {
+      this.loadCharacters(); // Load more characters by scrolling to the end
+    }
   }
 }
