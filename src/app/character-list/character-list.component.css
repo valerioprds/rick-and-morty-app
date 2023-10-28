@@ -1,3 +1,12 @@
+.logo-container {
+  text-align: center;
+}
+
+.logo-container img {
+  width: 900px;
+  height: 450px;
+}
+
 .title-with-line {
   display: flex;
   align-items: center;
@@ -16,14 +25,12 @@
   content: "";
 }
 
-
 .card-img-top {
   position: absolute;
   top: -25px;
   border-radius: 50%;
   width: 180px;
   height: 180px;
-
 }
 
 .border-card {
@@ -35,5 +42,3 @@
   color: white;
   margin-top: 80px;
 }
-
-
