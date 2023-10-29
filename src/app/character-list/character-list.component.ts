@@ -12,6 +12,7 @@ export class CharacterListComponent implements OnInit {
   searchForm: FormGroup;
   page = 1; // present page
   loading = false;
+  showScrollTopButton = false;
 
   constructor(private characterService: CharacterService) {
     this.searchForm = new FormGroup({
@@ -70,6 +71,13 @@ export class CharacterListComponent implements OnInit {
     );
   }
 
+  scrollToTop() {
+    window.scroll({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
+
   // Function to handle scroll event
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event) {
@@ -77,7 +85,14 @@ export class CharacterListComponent implements OnInit {
       window.innerHeight + window.scrollY >= document.body.offsetHeight - 1 &&
       !this.loading
     ) {
-      this.loadCharacters(); // Load more characters by scrolling to the end
+      this.loadCharacters();
+    }
+
+    // Check the scroll position to show/hide the scroll-to-top button
+    if (window.scrollY > 1000) {
+      this.showScrollTopButton = true;
+    } else {
+      this.showScrollTopButton = false;
     }
   }
 }

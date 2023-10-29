@@ -42,3 +42,29 @@
   color: white;
   margin-top: 80px;
 }
+
+
+
+/* Add this CSS in your component's CSS file or global CSS */
+ .scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  border-radius: 50%;
+  background-color: #29b7c4;
+
+}
+
+/* Define the initial position for the arrow */
+.fa-arrow-up {
+  position: relative;
+  transition: transform 0.3s ease;
+
+}
+
+/* Define the hover effect to move the arrow when hovered */
+.fa-arrow-up:hover {
+  transform: translateY(-5px); /* Move the arrow icon 5 pixels up when hovered */
+}
+
