@@ -12,6 +12,44 @@
   align-items: center;
 }
 
+.search-container {
+  display: flex;
+  position: relative;
+  background-color: #f0f0f0;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+
+}
+
+.magnifying-glass {
+  background-color: #00b5cc;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.magnifying-glass:hover {
+  background-color: #b2df28 ;
+  color: #0e393f;
+}
+
+.fa-magnifying-glass {
+  font-size: 1.2em;
+}
+
+
 .title-text {
   font-size: 40px;
   margin-right: 10px;

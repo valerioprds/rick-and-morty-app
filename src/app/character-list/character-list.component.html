@@ -7,16 +7,20 @@
     />
   </div>
   <form [formGroup]="searchForm" (ngSubmit)="search()">
-    <div class="form-group">
+    <div class="form-group search-container">
       <input
         type="text"
-        class="form-control"
+        class="form-control search-input"
         placeholder="Search Character"
         formControlName="searchQuery"
       />
+      <button type="submit" class="btn magnifying-glass">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
     </div>
-    <button type="submit" class="btn btn-primary">Search</button>
   </form>
+
+
   <div class="title-with-line">
     <h1 class="title-text mt-5">Character List</h1>
     <div class="line mt-5"></div>
