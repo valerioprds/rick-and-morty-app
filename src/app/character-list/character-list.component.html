@@ -20,7 +20,6 @@
     </div>
   </form>
 
-
   <div class="title-with-line">
     <h1 class="title-text mt-5">Character List</h1>
     <div class="line mt-5"></div>
@@ -33,7 +32,9 @@
           *ngFor="let character of characters"
           class="col-12 col-sm-6 col-md-4 col-lg-3"
         >
-          <div class="card mb-4 border-card">
+          <div
+            class="card mb-4 border-card animate__animated animate__fadeInDown"
+          >
             <div
               class="d-flex justify-content-center align-items-center"
               style="height: 150px"
@@ -58,8 +59,11 @@
       </div>
     </div>
   </div>
-  <button (click)="scrollToTop()" class="btn btn-primary scroll-to-top" [hidden]="!showScrollTopButton">
+  <button
+    (click)="scrollToTop()"
+    class="btn btn-primary scroll-to-top"
+    [hidden]="!showScrollTopButton"
+  >
     <i class="fa-solid fa-arrow-up"></i>
   </button>
-
 </div>
