@@ -1,27 +1,37 @@
-# RickAndMortyApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
+# Rick and Morty Character List Web App
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Overview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The Rick and Morty Character List Web App is a simple Angular application that allows you to explore and search for characters from the popular TV show "Rick and Morty." You can scroll through the list of characters, search for specific characters by name, and even return to the top of the character list with a single click.
 
-## Build
+To experience this web app, you can simply follow the instructions below to launch it.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Features
 
-## Running unit tests
+1. **Character List**: The app displays a list of characters from the "Rick and Morty" series, including their names and images.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. **Infinite Scrolling**: As you scroll down the page, more characters are dynamically loaded from the API, allowing you to explore an extensive list of characters.
 
-## Running end-to-end tests
+3. **Search Functionality**: You can search for characters by entering their name in the search bar. The app will filter and display characters that match your search query.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. **Scroll-to-Top Button**: A scroll-to-top button appears when you scroll down the list. Clicking it will quickly take you back to the top of the character list.
 
-## Further help
+## How to Launch
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To launch the Rick and Morty Character List Web App, follow these steps:
+
+1. Make sure you have Node.js and npm (Node Package Manager) installed on your machine.
+
+2. Clone the repository to your local machine or download it as a ZIP file.
+
+3. Open your terminal or command prompt and navigate to the project directory.
+
+4. Run the following commands to install the required dependencies and start the app:
+
+   ```bash
+   npm install
+   npm start
+
