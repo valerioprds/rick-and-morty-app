@@ -81,7 +81,15 @@
   margin-top: 80px;
 }
 
-
+.card:hover {
+  background-color: #bed464;
+  color: #0d7c85;
+  margin-top: 80px;
+  cursor: pointer;
+}
+.border-card:hover {
+  border: 3px solid #0d7c85;
+}
 
 /* Add this CSS in your component's CSS file or global CSS */
  .scroll-to-top {
