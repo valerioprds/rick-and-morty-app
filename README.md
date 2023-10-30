@@ -1,6 +1,4 @@
-
 # Rick and Morty Character List Web App
-
 
 
 ## Overview
@@ -29,24 +27,21 @@ To launch the Rick and Morty Character List Web App, follow these steps:
 
 3. Open your terminal or command prompt and navigate to the project directory.
 
-## Running the Web App
-
-1. The app should now be running locally. Open your web browser and go to [http://localhost:4200/](http://localhost:4200/) to access the web app.
-
-## Demo
-
-- You can also experience the app live by visiting the [Rick and Morty Character List Demo](https://rick-and-morty-app-lovat.vercel.app/).
-
-Feel free to explore the characters and try out the search and infinite scrolling features.
-
-## About
-
-This web app is built using Angular and fetches character data from an API, allowing you to interact with the fascinating characters from the "Rick and Morty" universe. It's a fun way to browse through your favorite characters or search for specific ones. Enjoy your journey into the world of Rick and Morty!
-
-
 4. Run the following commands to install the required dependencies and start the app:
 
    ```bash
    npm install
    npm start
+
+## Running Locally
+
+The app should now be running locally. Open your web browser and go to [http://localhost:4200/](http://localhost:4200/) to access the web app.
+
+## Demo
+
+You can also experience the app live by visiting the [Rick and Morty Character List Demo](https://rick-and-morty-app-lovat.vercel.app/). Feel free to explore the characters and try out the search and infinite scrolling features.
+
+## About
+
+This web app is built using Angular and fetches character data from an API, allowing you to interact with the fascinating characters from the "Rick and Morty" universe. It's a fun way to browse through your favorite characters or search for specific ones. Enjoy your journey into the world of Rick and Morty!
 
