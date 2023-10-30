@@ -13,6 +13,8 @@ export class CharacterListComponent implements OnInit {
   page = 1; // present page
   loading = false;
   showScrollTopButton = false;
+  characterNotFound: boolean = false;
+
 
   constructor(private characterService: CharacterService) {
     this.searchForm = new FormGroup({
@@ -54,15 +56,15 @@ export class CharacterListComponent implements OnInit {
     this.characterService.getCharacters().subscribe(
       (data: any) => {
         const allCharacters = data['results'];
-        if (searchQuery) {
-          this.characters = allCharacters.filter((character: any) => {
-            //Here you can define filtering logic, for example searching on name or other properties
-            // In this example, filter by character name
-            return character.name.toLowerCase().includes(searchQuery);
-          });
+        const filteredCharacters = allCharacters.filter((character: any) => {
+          return character.name.toLowerCase().includes(searchQuery);
+        });
+
+        if (filteredCharacters.length === 0) {
+          this.characterNotFound = true;
         } else {
-          //If no search term was entered, displays all characters
-          this.characters = allCharacters;
+          this.characterNotFound = false;
+          this.characters = filteredCharacters;
         }
       },
       (error) => {
@@ -70,6 +72,7 @@ export class CharacterListComponent implements OnInit {
       }
     );
   }
+
 
   scrollToTop() {
     window.scroll({

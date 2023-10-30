@@ -26,7 +26,6 @@
   padding: 10px;
   font-size: 16px;
   outline: none;
-
 }
 
 .magnifying-glass {
@@ -41,14 +40,13 @@
 }
 
 .magnifying-glass:hover {
-  background-color: #b2df28 ;
+  background-color: #b2df28;
   color: #0e393f;
 }
 
 .fa-magnifying-glass {
   font-size: 1.2em;
 }
-
 
 .title-text {
   font-size: 40px;
@@ -91,26 +89,32 @@
   border: 3px solid #0d7c85;
 }
 
+.character-not-found {
+  color: rgb(231, 5, 5);
+  font-size: 44px;
+  font-style: bolder;
+  font-weight: bold;
+}
+
 /* Add this CSS in your component's CSS file or global CSS */
- .scroll-to-top {
+.scroll-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 999;
   border-radius: 50%;
   background-color: #29b7c4;
-
 }
 
 /* Define the initial position for the arrow */
 .fa-arrow-up {
   position: relative;
   transition: transform 0.3s ease;
-
 }
 
 /* Define the hover effect to move the arrow when hovered */
 .fa-arrow-up:hover {
-  transform: translateY(-5px); /* Move the arrow icon 5 pixels up when hovered */
+  transform: translateY(
+    -5px
+  ); /* Move the arrow icon 5 pixels up when hovered */
 }
-
